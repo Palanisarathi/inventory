@@ -22,8 +22,8 @@ app.get('/api/get',(req,res)=>{
         res.send(result)
     })
 })
-app.put('/api/getBySearch/:id',(req,res)=>{
-    const sqlSELECT="SELECT * FROM inventorydb.serverinventory where ID=?;";
+app.get('/api/getBySearch/:id',(req,res)=>{
+    const sqlSELECT="SELECT * FROM inventorydb.serverinventory where id=?;";
     db.query(sqlSELECT,(err,result)=>{
         res.send(result)
     })
